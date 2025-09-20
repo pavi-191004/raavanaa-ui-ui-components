@@ -1,11 +1,24 @@
-import './App.css'
+
+import Heading from './ui/atoms/heading/Heading'
+import Input from './ui/atoms/input/Input'
+import Subheading from './ui/atoms/subheading/Subheading'
+import Label from './ui/atoms/label/Label'
+import Formlabel from './ui/atoms/formlabel/Formlabel'
+import Textarea from './ui/atoms/textarea/Textarea'
+import Actionbutton from './ui/atoms/actionbutton/Actionbutton'
 
 function App() {
  
 
   return (
     <div>
-      <h1>Welcome to UI Components Module</h1>
+      <Heading />
+      <Subheading />
+      <Input />
+      <Label />
+      <Formlabel />
+      <Textarea />
+      <Actionbutton />
     </div>
      
   )

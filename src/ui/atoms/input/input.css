@@ -1,0 +1,25 @@
+.input {
+  width: 100%;
+  max-width: 300px;
+  height: 40px;
+  padding: 8px 8px;
+  font-size: 22px;
+  color: #333333ff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  margin: 20px;
+  
+  
+}
+
+.input:focus {
+  outline: none;
+  border: 1px solid #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+.input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,22 @@
+.textarea {
+  min-height: 200px;  
+  width: 600px; 
+  padding: 8px;
+  font-size: 22px;
+  color: #333333ff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  margin: 20px;
+  resize: vertical;
+  line-height: 1.4;
+  overflow-y: auto;
+  
+  vertical-align:top;
+}
+
+.textarea:focus {
+  outline: none;
+  border: 1px solid #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
