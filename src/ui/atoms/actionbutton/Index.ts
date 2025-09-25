@@ -1,2 +1,2 @@
-export * from './Actionbutton';
-export * from './Actionbutton.types';
+export * from './ActionButton';
+export * from './ActionButton.types';

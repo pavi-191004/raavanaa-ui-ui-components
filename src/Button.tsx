@@ -1,9 +1,9 @@
-const Button = () => {
-  return (
-    <div>
-      <h1>Welcome to Button Component</h1>
-    </div>
-  );
-};
+// const Button = () => {
+//   return (
+//     <div>
+//       <h1>Welcome to Button Component</h1>
+//     </div>
+//   );
+// };
 
-export default Button;
+// export default Button;

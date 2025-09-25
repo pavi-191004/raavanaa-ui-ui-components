@@ -1,4 +1,4 @@
-export type FormlabelProps={
-    text: string | number;
-    
+export type FormLabelProps={
+    text:string | number;
+    required ?:boolean;
 }

@@ -1,13 +1,14 @@
-import type { FormlabelProps } from "./Index";
+import type { FormLabelProps } from './FormLabel.types';
 import './formlabel.css';
+import Form from "react-bootstrap/Form";
 
 
-const Formlabel = ({text}: FormlabelProps) => {
+const FormLabel = ({text, required}: FormLabelProps) => {
     return(
-        <div>
-            <label className="formlabel">{text}7.Formlabel</label>
+        <div className="formlabel">
+            <Form.Label className={required ? "form-label-required" : ""}>{text}</Form.Label>
             
         </div>
     )
 }
-export default Formlabel; 
+export default FormLabel; 

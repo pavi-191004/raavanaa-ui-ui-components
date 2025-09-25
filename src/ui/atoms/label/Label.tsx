@@ -1,12 +1,13 @@
-import './label.css'
-import type {LabelProps} from './Index';
+import Badge from 'react-bootstrap/Badge';
+import type { LabelProps } from './Label.types';
+import './label.css';
 
+const Label = ({ text, className, bg }: LabelProps) => {
+  return (
+    <Badge pill className={`custom-badge ${className || ''}`} bg={bg}>
+      {text}
+    </Badge>
+  );
+};
 
-const Label = ({text}: LabelProps) => {
-    return(
-        <div>
-            <label className="label">{text}4.Label</label>
-        </div>
-    )
-}
-export default Label; 
+export default Label;

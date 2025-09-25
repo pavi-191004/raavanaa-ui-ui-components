@@ -1,2 +1,2 @@
- export * from './Formlabel'
- export * from './Formlabel.types'
+ export * from './FormLabel'
+ export * from './FormLabel.types';

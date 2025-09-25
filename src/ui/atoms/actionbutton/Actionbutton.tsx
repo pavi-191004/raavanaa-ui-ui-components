@@ -1,13 +1,19 @@
-import type {ActionbuttonProps} from './Index';
-import './actionbutton.css';
+import './actionbutton.css'
+import type { ActionButtonProps } from './ActionButton.types'
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const Actionbutton = ({text, onClick, disabled, variant="primary"}: ActionbuttonProps) => {
+const ActionButton = ({text, onClick, disabled, variant, className}: ActionButtonProps) => {
     return(
         <div>
-            <button className={`action-btn ${variant}`} onClick={onClick} disabled={disabled}>{text}Button</button>
+            <Button variant={variant} className={`actionbutton ${className || ""}`} onClick={onClick} disabled={disabled}>{text}</Button>
         </div>
     )
 }
 
-export default Actionbutton;
+export default ActionButton;
+
+
+
+

@@ -1,14 +1,13 @@
-import type { HeadingProps } from './Index';
-import './heading.css';
+import "./heading.css"
+import type { HeadingProps } from "./Heading.types"
 
 
-
-const Heading = ({text}: HeadingProps) => {
+const Heading = ({text, as, className}: HeadingProps) => {
+    const Tag = as || 'h1';
     
     return(
-        <div className="heading">
-            <h1>{text}</h1>
-            <h1>1.Heading</h1>
+        <div>
+            <Tag className={`heading ${className || ""}` }>{text}</Tag>
         </div>
     )
 }

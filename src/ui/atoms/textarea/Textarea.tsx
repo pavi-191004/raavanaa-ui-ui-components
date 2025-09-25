@@ -1,17 +1,21 @@
-import './textarea.css'
-import type {TextareaProps} from './Index';
+import type { TextareaProps } from './Textarea.types';
+import './textarea.css';
+import Form from 'react-bootstrap/Form';
 
-
-const Textarea = ({ type = "text", placeholder, value }: TextareaProps) => {
+const Textarea = ({ placeholder, value, onChange }: TextareaProps) => {
   return (
-    <div>
-       <div>
-        <h3 >5. Text Area</h3>
-      </div>
-     
-      <textarea className='textarea' placeholder={placeholder} value={value} />
-     
-    </div>
+    <Form>
+      <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+        <Form.Control 
+          as="textarea" 
+          rows={10} 
+          className="textarea"
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+        />
+      </Form.Group>
+    </Form>
   );
 };
 

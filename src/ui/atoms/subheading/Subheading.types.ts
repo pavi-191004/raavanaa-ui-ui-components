@@ -1,3 +1,3 @@
-export type SubheadingProps = {
+export type SubHeadingProps = {
     text: string | number;
 }

@@ -1,2 +1,2 @@
-export * from './Subheading'
-export * from './Subheading.types'
+export * from './SubHeading'
+export * from './subHeading.types'

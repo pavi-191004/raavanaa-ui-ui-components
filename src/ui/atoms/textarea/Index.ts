@@ -1,2 +1,2 @@
-export * from './Textarea';
+export * from './TextArea.tsx'
 export * from './Textarea.types';

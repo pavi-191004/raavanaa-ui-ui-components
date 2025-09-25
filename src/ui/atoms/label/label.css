@@ -1,9 +1,10 @@
-.label {
-  font-size: 20px;
-  font-weight: 500;
-  display: block;
-  margin-bottom: 6px;
-  color: rgb(53, 53, 53);
-  cursor: pointer;
+.custom-badge {
+
+margin: 10px !important ;
+padding: 8px !important ;
 }
+
+
+
+
 

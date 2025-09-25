@@ -1,15 +1,25 @@
-import './input.css'
-import type {InputProps} from './Index';
+import "./input.css";
+import type { InputProps } from "./Input.types";
+import Form from 'react-bootstrap/Form';
 
 
-const Input = ({ type = "text", placeholder, value, onChange, disabled }: InputProps) => {
+const Input = ({ type, placeholder, value, onChange, disabled, multiple }: InputProps) => {
   return (
-    <div>
+  
        <div>
-        <h3 >3. Input field</h3>
+        <Form>
+       <Form.Group className="input" controlId="exampleForm.ControlInput1">
+        <Form.Control  className="form-control-file"
+        type={type}
+        placeholder={placeholder} 
+        value={value} 
+        onChange={onChange} 
+        disabled={disabled} 
+        multiple={multiple} />
+      </Form.Group>
+      </Form>
       </div>
-      <input className="input" type={type} placeholder={placeholder} value={value} onChange={onChange} disabled={disabled} />
-      </div>
+      
   );
 };
 
