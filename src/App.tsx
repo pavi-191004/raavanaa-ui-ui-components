@@ -1,14 +1,15 @@
-import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@radix-ui/colors/black-alpha.css';
+import Example from './Example';
 
-function App() {
- 
+function App () {
 
   return (
     <div>
-      <h1>Welcome to UI Components Module</h1>
+      <Example />
     </div>
      
   )
 }
 
-export default App
+export default App;

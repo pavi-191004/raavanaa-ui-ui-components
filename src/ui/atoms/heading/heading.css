@@ -1,0 +1,18 @@
+.heading {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+  font-size: 5rem;
+  font-weight: 800;
+  color: #05000a;
+  padding: 8px;
+  margin: 10px;
+ 
+}
+
+.example-heading {
+
+  background: #034f84 ;
+  color: transparent;
+  -webkit-background-clip:text;
+  background-clip: text;
+
+}
