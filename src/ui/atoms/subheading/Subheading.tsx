@@ -3,10 +3,12 @@ import type { SubHeadingProps } from './subHeading.types'
 
 
 
-const SubHeading =({text}: SubHeadingProps) => {
+const SubHeading =({text, as, className}: SubHeadingProps) => {
+    const Tag = as || 'h3';
     return(
-        <div className='subheading'>
-            <h3>{text}</h3>
+        <div>
+            <Tag className={`subheading ${className || ""}`}>{text}</Tag>
+        
             
         </div>
     )

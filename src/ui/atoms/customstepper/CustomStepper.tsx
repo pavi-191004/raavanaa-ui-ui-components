@@ -14,7 +14,7 @@ const CustomStepper = ({step1, step2, step3, step4}: CustomstepperProps) => {
   return (
     <div>
       <Stepper active={active} onStepClick={setActive} allowNextStepsSelect={false} color="indigo" className='stepper'>
-        <Stepper.Step label="Step 1">
+        <Stepper.Step label="Step 1" >
           {step1}
         </Stepper.Step >
         <Stepper.Step label="Step 2" >

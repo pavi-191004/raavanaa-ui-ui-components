@@ -1,5 +1,4 @@
 .textarea {
-  
   transition: border 0.2s ease, box-shadow 0.2s ease !important;
   margin: 10px !important;
   resize: vertical;

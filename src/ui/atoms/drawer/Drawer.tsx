@@ -6,7 +6,7 @@ import './drawer.css';
 import ActionButton from '../actionbutton/ActionButton.tsx';
 
 
-const Drawer = ({ title, paragraph, placement, ...props }: Readonly<DrawerProps>) => {
+const Drawer = ({ title, paragraph, children, placement, ...props }: Readonly<DrawerProps>) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -22,7 +22,8 @@ const Drawer = ({ title, paragraph, placement, ...props }: Readonly<DrawerProps>
           <Offcanvas.Title >{title}</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className='drawer-body'>
-          {paragraph}
+          {paragraph && <p>{paragraph}</p>}
+          {children}
         </Offcanvas.Body>
       </Offcanvas>
     </>

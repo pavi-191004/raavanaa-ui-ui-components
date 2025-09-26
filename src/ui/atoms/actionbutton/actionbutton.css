@@ -1,5 +1,5 @@
 .actionbutton{
-  font-size: medium;
+  
   max-width: 150px !important;
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif !important;
@@ -17,7 +17,6 @@
   transform: scale(0.95) !important; 
 
 }
-
 .actionbutton:disabled {
   background-color: #ccc;
   cursor: not-allowed;
@@ -31,4 +30,19 @@
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.my-custom-btn:hover {
+  background: #5f6db5 !important;   
+}
+
+.my-custom-btn:active {
+  background: #4a56a0 !important;   
+  transform: scale(0.95) !important;
+}
+
+
+.my-custom-btn:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(118, 133, 201, 0.5) ;
 }
