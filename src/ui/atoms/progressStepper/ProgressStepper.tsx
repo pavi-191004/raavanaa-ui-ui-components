@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { Stepper, Group } from '@mantine/core';
-import type { CustomstepperProps } from './CustomStepper.types.ts';
+import type { ProgressStepperProps } from './ProgressStepper.types.ts';
 import '@mantine/core/styles.css';
-import './customstepper.css';
-import Actionbutton from '../actionbutton/ActionButton.tsx';
+import './progressStepper.css';
+import Actionbutton from '../actionButton/ActionButton.tsx';
 
 
-const CustomStepper = ({step1, step2, step3, step4}: CustomstepperProps) => {
+const ProgressStepper = ({step1, step2, step3, step4}: ProgressStepperProps) => {
  const [active, setActive] = useState(1);
   const nextStep = () => setActive((current) => (current < 3 ? current + 1 : current));
   const prevStep = () => setActive((current) => (current > 0 ? current - 1 : current));
@@ -40,4 +40,6 @@ const CustomStepper = ({step1, step2, step3, step4}: CustomstepperProps) => {
     </div>
   );
 }
-export default CustomStepper;
+export default ProgressStepper;
+
+

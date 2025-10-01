@@ -1,5 +1,5 @@
 import './subheading.css'
-import type { SubHeadingProps } from './subHeading.types'
+import type { SubHeadingProps } from './SubHeading.types'
 
 
 

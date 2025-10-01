@@ -3,7 +3,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import type { DrawerProps } from './Drawer.types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './drawer.css';
-import ActionButton from '../actionbutton/ActionButton.tsx';
+import ActionButton from '../actionButton/ActionButton.tsx';
 
 
 const Drawer = ({ title, paragraph, children, placement, ...props }: Readonly<DrawerProps>) => {

@@ -22,8 +22,8 @@
   cursor: not-allowed;
 }
  
-.my-custom-btn {
-  background:  #7685c9;
+.raavanaa-btn {
+  background:  #F37748;
   border-radius: 30px;
   color: white;
   font-weight: bold;
@@ -32,12 +32,12 @@
   transition: all 0.2s ease;
 }
 
-.my-custom-btn:hover {
-  background: #5f6db5 !important;   
+.raavanaa-btn:hover {
+  background: #f55c24 !important;   
 }
 
-.my-custom-btn:active {
-  background: #4a56a0 !important;   
+.raavanaa-btn:active {
+  background: #f74e10 !important;   
   transform: scale(0.95) !important;
 }
 

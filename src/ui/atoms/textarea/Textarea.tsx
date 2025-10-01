@@ -1,11 +1,11 @@
-import type { TextareaProps } from './Textarea.types';
+import type { TextareaProps } from './TextArea.types';
 import './textarea.css';
 import Form from 'react-bootstrap/Form';
 
-const Textarea = ({ placeholder, value, onChange }: TextareaProps) => {
+const Textarea = ({placeholder, value, onChange,helperText, error }: TextareaProps) => {
   return (
     <Form>
-      <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+      <Form.Group className="mb-3" >
         <Form.Control 
           as="textarea" 
           rows={10} 
@@ -14,6 +14,9 @@ const Textarea = ({ placeholder, value, onChange }: TextareaProps) => {
           value={value}
           onChange={onChange}
         />
+         <Form.Text className="text-muted">{helperText}</Form.Text>
+          <p className="invalid-feedback">{error}</p>
+
       </Form.Group>
     </Form>
   );

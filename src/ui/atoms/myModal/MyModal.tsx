@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import type { CustomModalProps } from './customModal.types.ts';
+import type { MyModalProps } from './MyModal.types.ts';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Actionbutton from '../actionbutton/ActionButton.tsx';
-import './custommodal.css';
+import Actionbutton from '../actionButton/ActionButton.tsx';
+import './myModal.css';
 
 
-const CustomModal = ({ title, paragraph }: CustomModalProps) => {
+const MyModal = ({ title, paragraph }: MyModalProps) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -32,4 +32,4 @@ const CustomModal = ({ title, paragraph }: CustomModalProps) => {
   );
 };
 
-export default CustomModal;
+export default MyModal;

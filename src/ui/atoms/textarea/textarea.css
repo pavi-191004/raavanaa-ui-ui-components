@@ -3,7 +3,7 @@
   margin: 10px !important;
   resize: vertical;
   overflow-y: auto;
-  font-family: Verdana, Geneva, Tahoma, sans-serif !important ;
+  font-family:  'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
   
 }
 
@@ -11,4 +11,16 @@
   width: 600px;
 }
 
+.text-muted {
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+  color: #6c757d;
+}
 
+.invalid-feedback {
+  font-size: 12px;
+  margin-top: 4px;
+  color: #dc3545; 
+  display: block;
+}

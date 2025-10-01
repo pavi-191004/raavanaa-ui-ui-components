@@ -1,12 +1,12 @@
 import type { FormLabelProps } from './FormLabel.types';
-import './formlabel.css';
+import './formLabel.css';
 import Form from "react-bootstrap/Form";
 
 
-const FormLabel = ({text, required}: FormLabelProps) => {
+const FormLabel = ({text, isRequired}: FormLabelProps) => {
     return(
         <div className="formlabel">
-            <Form.Label className={required ? "form-label-required" : ""}>{text}</Form.Label>
+            <Form.Label className={isRequired ? "form-label-required" : ""}>{text}</Form.Label>
             
         </div>
     )
