@@ -5,8 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './drawer.css';
 import ActionButton from '../actionButton/ActionButton.tsx';
 
-
-const Drawer = ({ title, paragraph, children, placement, ...props }: Readonly<DrawerProps>) => {
+const Drawer = ({ title, paragraph, children, className, placement = 'end', openButtonText = "Open Drawer", ...props 
+}: Readonly<DrawerProps>) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -14,13 +14,23 @@ const Drawer = ({ title, paragraph, children, placement, ...props }: Readonly<Dr
 
   return (
     <>
-       <ActionButton text="Open Drawer" className='my-custom-btn' onClick={handleShow} />
+      <ActionButton 
+        text={openButtonText} 
+        className='raavanaa-btn' 
+        onClick={handleShow} 
+      />
 
-
-      <Offcanvas className='drawer'  show={show} onHide={handleClose} placement='end'{...props}>
+      <Offcanvas 
+        className='drawer'  
+        show={show} 
+        onHide={handleClose} 
+        placement={placement}
+        {...props}
+      >
         <Offcanvas.Header className='drawer-header' closeButton>
-          <Offcanvas.Title >{title}</Offcanvas.Title>
+          <Offcanvas.Title>{title}</Offcanvas.Title>
         </Offcanvas.Header>
+
         <Offcanvas.Body className='drawer-body'>
           {paragraph && <p>{paragraph}</p>}
           {children}
@@ -31,5 +41,3 @@ const Drawer = ({ title, paragraph, children, placement, ...props }: Readonly<Dr
 }
 
 export default Drawer;
-
-

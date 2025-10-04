@@ -2,7 +2,7 @@ import type { TextareaProps } from './TextArea.types';
 import './textarea.css';
 import Form from 'react-bootstrap/Form';
 
-const Textarea = ({placeholder, value, onChange,helperText, error }: TextareaProps) => {
+const Textarea = ({placeholder, value, onChange, helperText, error }: TextareaProps) => {
   return (
     <Form>
       <Form.Group className="mb-3" >

@@ -5,8 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Actionbutton from '../actionButton/ActionButton.tsx';
 import './myModal.css';
 
-
-const MyModal = ({ title, paragraph }: MyModalProps) => {
+const MyModal = ({ title, paragraph, openButtonText = "Open Modal", closeButtonText = "Ok" }: MyModalProps) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -14,18 +13,15 @@ const MyModal = ({ title, paragraph }: MyModalProps) => {
 
   return (
     <div>
-      
+      <Actionbutton text={openButtonText} className='raavanaa-btn' onClick={handleShow} />
 
-      <Actionbutton text="Open Modal" className='my-custom-btn' onClick={handleShow} />
-
-      
       <Modal show={show} onHide={handleClose}>
         <Modal.Header className='modal-header' closeButton>
           <Modal.Title>{title}</Modal.Title>
         </Modal.Header>
         <Modal.Body className='modal-body'>{paragraph}</Modal.Body>
         <Modal.Footer>
-          <Actionbutton text="Close" variant='secondary' onClick={handleClose} />
+          <Actionbutton text={closeButtonText} variant='secondary' onClick={handleClose} />
         </Modal.Footer>
       </Modal>
     </div>

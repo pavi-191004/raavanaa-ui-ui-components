@@ -4,5 +4,6 @@ export type DrawerProps={
     placement: 'start' | 'end' ;
     className?: string;
     children?: React.ReactNode;
+    openButtonText?: string;
   
 }

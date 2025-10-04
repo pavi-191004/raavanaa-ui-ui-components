@@ -1,5 +1,6 @@
-export type MyModalProps={
-  title: string | number;
-  paragraph: string | number;
-  
-}
+export type MyModalProps = {
+  title: string;
+  paragraph: string;
+  openButtonText?: string;
+  closeButtonText?: string;
+};

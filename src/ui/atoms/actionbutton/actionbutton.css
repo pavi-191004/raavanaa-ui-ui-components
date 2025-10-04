@@ -23,7 +23,7 @@
 }
  
 .raavanaa-btn {
-  background:  #F37748;
+  background:  #d8315b;
   border-radius: 30px;
   color: white;
   font-weight: bold;
@@ -33,11 +33,11 @@
 }
 
 .raavanaa-btn:hover {
-  background: #f55c24 !important;   
+  background: #df2151 !important;   
 }
 
 .raavanaa-btn:active {
-  background: #f74e10 !important;   
+  background: #d31746 !important;   
   transform: scale(0.95) !important;
 }
 
