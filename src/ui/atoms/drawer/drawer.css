@@ -1,0 +1,17 @@
+.drawer {
+  border-radius: 12px !important;
+  margin: 10px !important;
+  background-color: var(--color-background) !important;
+  color: var(--color-text) !important;
+}
+
+.drawer-header {
+  font-family: var(--font-primary) !important;
+  color: var(--color-primary) !important;
+  font-weight: bold;
+}
+
+.drawer-body {
+  font-family: var(--font-secondary) !important;
+  color: var(--color-text) !important;
+}

@@ -1,0 +1,46 @@
+.actionbutton {
+  max-width: 150px !important;
+  font-weight: bold;
+  font-family: var(--font-secondary) !important;
+  transition: border 0.2s ease, box-shadow 0.2s ease !important;
+  margin: 10px !important;
+  border: 2px solid var(--color-primary) !important;
+  border-radius: 10px !important; 
+  
+}
+
+.actionbutton:hover {
+  transform: scale(1.05) !important;
+  color: white !important;
+}
+
+.actionbutton:active {
+  transform: scale(0.95) !important;
+  color: white !important;
+}
+
+.actionbutton:disabled {
+  background-color: #ccc !important;
+  cursor: not-allowed;
+}
+
+
+.raavanaa-btn {
+  background: var(--color-secondary) !important;
+  border-radius: 20px !important;
+  color: white !important;
+  font-weight: bold;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.raavanaa-btn:hover {
+  background: #df2151 !important;
+}
+
+.raavanaa-btn:active {
+  background: #d31746 !important;
+  transform: scale(0.95) !important;
+}
+

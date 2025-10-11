@@ -1,0 +1,14 @@
+.heading {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #05000a;
+  padding: 8px;
+  margin: 10px;
+ 
+}
+
+.example-heading {
+  
+  color:var(--color-primary);
+
+}

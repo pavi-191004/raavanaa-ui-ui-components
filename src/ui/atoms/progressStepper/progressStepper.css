@@ -1,0 +1,6 @@
+.stepper{
+    width: 50% !important;
+    margin: 20px !important;
+    font-family: var(--font-secondary) !important;
+    font-weight: 800;
+}

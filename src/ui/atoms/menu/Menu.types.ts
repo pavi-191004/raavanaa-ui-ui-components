@@ -1,0 +1,9 @@
+export type MenuProps={
+    title:string | number;
+    paragraph:string | number;
+    placement: 'start' | 'end' ;
+    className?: string;
+    children?: React.ReactNode;
+    openButtonText?: string;
+  
+}

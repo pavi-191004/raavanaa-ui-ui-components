@@ -1,0 +1,7 @@
+.modal-header {
+    font-family: var(--font-primary) !important;
+  
+}
+.modal-body{
+    font-family: var(--font-secondary) !important;
+}
