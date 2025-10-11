@@ -2,7 +2,7 @@
     margin: 10px !important;
     padding: 8px !important ;
     font-weight: lighter;
-    font-family:  'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+    font-family:  var(--font-tertiary) !important;
     color: #4d4d4d;
     
 }

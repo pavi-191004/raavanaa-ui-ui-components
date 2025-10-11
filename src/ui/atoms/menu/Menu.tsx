@@ -1,154 +1,67 @@
-import * as React from "react";
-import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import {
-  HamburgerMenuIcon,
-  DotFilledIcon,
-  CheckIcon,
-  ChevronRightIcon,
-} from "@radix-ui/react-icons";
-import "./menu.css";
+// Menu.tsx
+import { useState } from 'react';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import { NavLink } from 'react-router-dom';
+import { 
+  MdDashboard, MdPeople, MdBusiness, MdAssignment, 
+  MdEventNote, MdBarChart, MdCampaign, MdSettings, MdLogout, MdMenu 
+} from 'react-icons/md';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-interface MenuProps {
-  newtab: React.ReactNode;
-  newwindow: React.ReactNode;
-  newprivatewindow: React.ReactNode;
+const Menu = () => {
+  const [show, setShow] = useState(false);
 
-  dropdownname: React.ReactNode;
-  dropdown1: React.ReactNode;
-  dropdown2: React.ReactNode;
-  dropdown3: React.ReactNode;
-  dropdown4: React.ReactNode;
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
-  checkbox1: React.ReactNode;
-  checkbox2: React.ReactNode;
-
-  label: React.ReactNode;
-  radio1: React.ReactNode;
-  radio2: React.ReactNode;
-}
-
-const Menu = ({
-  newtab,
-  newwindow,
-  newprivatewindow,
-  dropdownname,
-  dropdown1,
-  dropdown2,
-  dropdown3,
-  dropdown4,
-  checkbox1,
-  checkbox2,
-  label,
-  radio1,
-  radio2,
-}: MenuProps) => {
-  const [bookmarksChecked, setBookmarksChecked] = React.useState(true);
-  const [urlsChecked, setUrlsChecked] = React.useState(false);
-  const [person, setPerson] = React.useState("pedro");
+  const menuItems = [
+    { to: "/", label: "Dashboard", icon: <MdDashboard /> },
+    { to: "/candidates", label: "Candidates", icon: <MdPeople /> },
+    { to: "/companies", label: "Companies", icon: <MdBusiness /> },
+    { to: "/recruiters", label: "Recruiters", icon: <MdAssignment /> },
+    { to: "/placement-drives", label: "Placement Drives", icon: <MdEventNote /> },
+    { to: "/reports", label: "Reports", icon: <MdBarChart /> },
+    { to: "/announcements", label: "Announcements", icon: <MdCampaign /> },
+    { to: "/settings", label: "Settings", icon: <MdSettings /> },
+    { to: "/logout", label: "Logout", icon: <MdLogout />, style: { color: "red", marginTop: "20px" } },
+  ];
 
   return (
-    <DropdownMenu.Root>
-      <DropdownMenu.Trigger asChild>
-        <button className="IconButton" aria-label="Customise options">
-          <HamburgerMenuIcon />
-        </button>
-      </DropdownMenu.Trigger>
+    <>
+      <button onClick={handleShow} style={{ background: "none", border: "none", fontSize: "24px", cursor: "pointer" }}>
+        <MdMenu />
+      </button>
 
-      <DropdownMenu.Portal>
-        <DropdownMenu.Content className="DropdownMenuContent" sideOffset={5}>
-          <DropdownMenu.Item className="DropdownMenuItem">
-            {newtab} <div className="RightSlot">⌘+T</div>
-          </DropdownMenu.Item>
-          <DropdownMenu.Item className="DropdownMenuItem">
-            {newwindow} <div className="RightSlot">⌘+N</div>
-          </DropdownMenu.Item>
-          <DropdownMenu.Item className="DropdownMenuItem" disabled>
-            {newprivatewindow} <div className="RightSlot">⇧+⌘+N</div>
-          </DropdownMenu.Item>
-
-          <DropdownMenu.Sub>
-            <DropdownMenu.SubTrigger className="DropdownMenuSubTrigger">
-              {dropdownname}
-              <div className="RightSlot">
-                <ChevronRightIcon />
-              </div>
-            </DropdownMenu.SubTrigger>
-            <DropdownMenu.Portal>
-              <DropdownMenu.SubContent
-                className="DropdownMenuSubContent"
-                sideOffset={2}
-                alignOffset={-5}
-              >
-                <DropdownMenu.Item className="DropdownMenuItem">
-                  {dropdown1} <div className="RightSlot">⌘+S</div>
-                </DropdownMenu.Item>
-                <DropdownMenu.Item className="DropdownMenuItem">
-                  {dropdown2}
-                </DropdownMenu.Item>
-                <DropdownMenu.Item className="DropdownMenuItem">
-                  {dropdown3}
-                </DropdownMenu.Item>
-                <DropdownMenu.Separator className="DropdownMenuSeparator" />
-                <DropdownMenu.Item className="DropdownMenuItem">
-                  {dropdown4}
-                </DropdownMenu.Item>
-              </DropdownMenu.SubContent>
-            </DropdownMenu.Portal>
-          </DropdownMenu.Sub>
-
-          <DropdownMenu.Separator className="DropdownMenuSeparator" />
-
-          <DropdownMenu.CheckboxItem
-            className="DropdownMenuCheckboxItem"
-            checked={bookmarksChecked}
-            onCheckedChange={setBookmarksChecked}
-          >
-            <DropdownMenu.ItemIndicator className="DropdownMenuItemIndicator">
-              <CheckIcon />
-            </DropdownMenu.ItemIndicator>
-            {checkbox1} <div className="RightSlot">⌘+B</div>
-          </DropdownMenu.CheckboxItem>
-          <DropdownMenu.CheckboxItem
-            className="DropdownMenuCheckboxItem"
-            checked={urlsChecked}
-            onCheckedChange={setUrlsChecked}
-          >
-            <DropdownMenu.ItemIndicator className="DropdownMenuItemIndicator">
-              <CheckIcon />
-            </DropdownMenu.ItemIndicator>
-            {checkbox2}
-          </DropdownMenu.CheckboxItem>
-
-          <DropdownMenu.Separator className="DropdownMenuSeparator" />
-
-          <DropdownMenu.Label className="DropdownMenuLabel">
-            {label}
-          </DropdownMenu.Label>
-          <DropdownMenu.RadioGroup value={person} onValueChange={setPerson}>
-            <DropdownMenu.RadioItem
-              className="DropdownMenuRadioItem"
-              value="pedro"
-            >
-              <DropdownMenu.ItemIndicator className="DropdownMenuItemIndicator">
-                <DotFilledIcon />
-              </DropdownMenu.ItemIndicator>
-              {radio1}
-            </DropdownMenu.RadioItem>
-            <DropdownMenu.RadioItem
-              className="DropdownMenuRadioItem"
-              value="colm"
-            >
-              <DropdownMenu.ItemIndicator className="DropdownMenuItemIndicator">
-                <DotFilledIcon />
-              </DropdownMenu.ItemIndicator>
-              {radio2}
-            </DropdownMenu.RadioItem>
-          </DropdownMenu.RadioGroup>
-
-          <DropdownMenu.Arrow className="DropdownMenuArrow" />
-        </DropdownMenu.Content>
-      </DropdownMenu.Portal>
-    </DropdownMenu.Root>
+      <Offcanvas show={show} onHide={handleClose} placement="start">
+        <Offcanvas.Header closeButton></Offcanvas.Header>
+        <Offcanvas.Body>
+          <ul style={{ listStyle: "none", padding: 0 }}>
+            {menuItems.map((item) => (
+              <li key={item.to} style={item.style || {}}>
+                <NavLink
+                  to={item.to}
+                  onClick={handleClose}
+                  style={({ isActive }) => ({
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    padding: "8px 12px",
+                    borderRadius: "6px",
+                    textDecoration: "none",
+                    color: item.style?.color || "#000",
+                    backgroundColor: isActive ? "#e0e0e0" : "transparent",
+                    transition: "background-color 0.2s",
+                  })}
+                  className="menu-link"
+                >
+                  {item.icon} {item.label}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </Offcanvas.Body>
+      </Offcanvas>
+    </>
   );
 };
 

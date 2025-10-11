@@ -1,6 +1,6 @@
 .stepper{
     width: 50% !important;
     margin: 20px !important;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+    font-family: var(--font-secondary) !important;
     font-weight: 800;
 }

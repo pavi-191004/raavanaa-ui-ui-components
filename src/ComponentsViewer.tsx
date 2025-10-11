@@ -9,13 +9,20 @@ import Formlabel from './ui/atoms/formLabel/FormLabel.tsx';
 import MyModal from './ui/atoms/myModal/MyModal.tsx';
 import Drawer from './ui/atoms/drawer/Drawer.tsx';
 import ProgressStepper from './ui/atoms/progressStepper/ProgressStepper.tsx';
+import Menu from './ui/atoms/menu/Menu.tsx';
 
 
-const Example = () => {
+
+const ComponentsViewer = () => {
   return (
     <div>
-           
 
+         
+<Menu
+
+  
+
+/>
         <Heading text="Raavana" as='h1' className="example-heading" />
         <SubHeading text="Raavanaa is a digital platform that helps students build smart profiles, makes it easy for colleges to manage recruitment activities, and gives recruiters a clear view of candidates’ real skills. It’s not just about resumes. It’s about skills, growth, and connecting the right people together." as='h3' className="example-subheading"/>
         <ActionButton text="Read More" className='raavanaa-btn' />
@@ -34,6 +41,6 @@ const Example = () => {
   )
 }
 
-export default Example;
+export default ComponentsViewer;
 
 

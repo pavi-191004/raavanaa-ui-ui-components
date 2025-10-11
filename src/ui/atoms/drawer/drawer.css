@@ -1,13 +1,17 @@
-.drawer{
-    border-radius: 12px !important;
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
-    margin-right: 10px !important;
+.drawer {
+  border-radius: 12px !important;
+  margin: 10px !important;
+  background-color: var(--color-background) !important;
+  color: var(--color-text) !important;
 }
+
 .drawer-header {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
-    color: black !important;
+  font-family: var(--font-primary) !important;
+  color: var(--color-primary) !important;
+  font-weight: bold;
 }
+
 .drawer-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  font-family: var(--font-secondary) !important;
+  color: var(--color-text) !important;
 }

@@ -5,7 +5,6 @@
   margin: 8px !important;
   color: #333;
   letter-spacing: 0.5px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
 }
 
 .form-label-required::after {

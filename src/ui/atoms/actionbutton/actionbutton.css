@@ -1,48 +1,46 @@
-.actionbutton{
-  
+.actionbutton {
   max-width: 150px !important;
   font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  font-family: var(--font-secondary) !important;
   transition: border 0.2s ease, box-shadow 0.2s ease !important;
   margin: 10px !important;
-  border-color: white !important;
+  border: 2px solid var(--color-primary) !important;
   border-radius: 10px !important; 
+  
 }
 
 .actionbutton:hover {
-  transform: scale(1.05) !important; 
+  transform: scale(1.05) !important;
+  color: white !important;
 }
 
 .actionbutton:active {
-  transform: scale(0.95) !important; 
-
+  transform: scale(0.95) !important;
+  color: white !important;
 }
+
 .actionbutton:disabled {
-  background-color: #ccc;
+  background-color: #ccc !important;
   cursor: not-allowed;
 }
- 
+
+
 .raavanaa-btn {
-  background:  #d8315b;
-  border-radius: 30px;
-  color: white;
+  background: var(--color-secondary) !important;
+  border-radius: 20px !important;
+  color: white !important;
   font-weight: bold;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
 }
 
 .raavanaa-btn:hover {
-  background: #df2151 !important;   
+  background: #df2151 !important;
 }
 
 .raavanaa-btn:active {
-  background: #d31746 !important;   
+  background: #d31746 !important;
   transform: scale(0.95) !important;
 }
 
-
-.my-custom-btn:focus {
-  outline: none !important;
-  box-shadow: 0 0 0 2px rgba(118, 133, 201, 0.5) ;
-}
